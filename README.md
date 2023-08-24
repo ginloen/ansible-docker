@@ -25,3 +25,13 @@ ansible all -m ping #check SSH connectivity
 
 ansible-playbook <playbook_yaml_file> #run ansible playbook
 ```
+
+# Install ansible on control node
+
+1. Configure PPA and install Ansible
+```
+sudo apt update
+sudo apt install software-properties-common
+sudo add-apt-repository --yes --update ppa:ansible/ansible
+sudo apt install ansible
+```
