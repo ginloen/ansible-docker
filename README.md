@@ -17,7 +17,7 @@ Prerequisites
 
     private_key_file = ansible.pem
     ```
-    3. private_key_file (for SSH into managed nodes)
+    3. private_key_file (for SSH into managed nodes; chmod 600)
 
 Ansible commands:
 ```
@@ -34,4 +34,9 @@ sudo apt update
 sudo apt install software-properties-common
 sudo add-apt-repository --yes --update ppa:ansible/ansible
 sudo apt install ansible
+```
+
+# Generate SSH keypair
+```
+ssh-keygen -t ed25519 -m PEM
 ```
